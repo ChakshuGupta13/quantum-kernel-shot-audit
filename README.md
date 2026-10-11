@@ -5,6 +5,18 @@ comparison of ideal and finite-shot quantum kernels with linear and RBF SVMs on
 Wisconsin Diagnostic Breast Cancer. It reports the observed negative result,
 not a new kernel algorithm or quantum advantage.
 
+## Open the Recorded Demo
+
+Open [demo.html](demo.html) in a desktop or mobile browser. The package works
+offline without a server, account or API key. It displays saved metrics, kernel
+matrices and per-record predictions, not new model fitting or quantum execution.
+
+The [six-scene presentation kit](video/production-plan.json) includes the
+[narration transcript](video/narration.txt), [voice directions](video/voice-style.txt)
+and prepared slides. Dedicated audio, video encoding and a public YouTube link
+remain pending. This project requires its own QCA form submission; the Prompt B
+video is not its presentation.
+
 The kernel builder, guarded sampling and classifier runners, synthetic calibration
 and training-only input preparation are implemented. Twenty-two quantum/capture
 tests and nineteen preparation/evaluator tests pass. The shared preprocessing was fitted once on the 32 frozen training

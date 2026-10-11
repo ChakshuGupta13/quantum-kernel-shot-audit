@@ -1,0 +1,101 @@
+{
+  "caption_reserved_from_y": 616,
+  "fps": 24,
+  "input_records": {
+    "evaluation-v1/report.json": {
+      "bytes": 2891,
+      "sha256": "31d54f9a82a352f94db0652d16f7fe66633d89e1d56afcefd9f70549ab952a43"
+    },
+    "evaluation-v1/rows/linear.json": {
+      "bytes": 3072,
+      "sha256": "83e0f35b7cb62ab064ae0edfe198af56c94ab67bc356938adf71208dff2f6c58"
+    },
+    "evaluation-v1/rows/quantum_ideal.json": {
+      "bytes": 3082,
+      "sha256": "415269b283cabe2ea15fbff4b81cb900b83db88a67476f71c2291132a3ed97f7"
+    },
+    "evaluation-v1/rows/quantum_shot.json": {
+      "bytes": 3105,
+      "sha256": "1b110e9b3cbce25b614c7360902a59767f181a0211486531f9ad962e2fbcff42"
+    },
+    "evaluation-v1/rows/rbf.json": {
+      "bytes": 3133,
+      "sha256": "22a149e84d793fdd955c3fe0f3103f31a4eb8d1eeb8ec75a62f334c058fec927"
+    },
+    "sampling-v1/ideal-kernels.npz": {
+      "bytes": 9270,
+      "sha256": "463d34a48457b8a854efb81879c7db38d7f06f2e14e6894a01db4fdedda7f95e"
+    },
+    "sampling-v1/sampled-kernels.npz": {
+      "bytes": 2579,
+      "sha256": "d3d584fdd6349dbabf588a1488d687a6074507e7ff871411d4e009805766eb6c"
+    }
+  },
+  "narration": {
+    "bytes": 2521,
+    "sha256": "304b0ae90dff9bab716eaf5920076c3be56f6136cc5293c7ce7c0ce357d68c43"
+  },
+  "project": "Quantum Kernel Shot Audit",
+  "published_to_youtube": false,
+  "resolution": [
+    1280,
+    720
+  ],
+  "sections": [
+    {
+      "text": "Quantum Kernel Shot Audit is a controlled comparison for Prompt A of Georgia Tech Qiskit Fall Fest. It asks whether a fixed quantum fidelity kernel supports classification, and how a finite shot budget changes the result. The project preserves the full experiment, including an unfavorable quantum outcome, instead of choosing a better-looking split after evaluation.",
+      "title": "Quantum Kernel Shot Audit"
+    },
+    {
+      "text": "The pilot uses the Wisconsin Diagnostic Breast Cancer dataset. Thirty-two training records and sixteen shared test records were frozen before evaluation. Scaling, four-component principal component analysis and angle scaling were fitted on training records only. The test records were transformed without another fit. The same transformed inputs were used for quantum, linear and radial-basis-function comparisons.",
+      "title": "One frozen input pipeline"
+    },
+    {
+      "text": "The quantum feature map uses four qubits and one layer of a linearly entangled ZZ map. Kernel entries are squared state overlaps. The sampled estimate measures the all-zero frequency of a compute-uncompute circuit. One thousand and eight kernel circuits were sampled at two hundred and fifty-six shots each. Raw counts, ideal matrices, sampled matrices and the training-derived spectral repair are retained.",
+      "title": "Ideal and sampled kernels"
+    },
+    {
+      "text": "Four fixed support-vector classifiers were fitted once and evaluated on the same sixteen records. The ideal quantum row had forty percent balanced accuracy, and the sampled quantum row had forty-five percent. Linear achieved ninety-five percent and the radial-basis-function row about ninety-two percent. Both quantum rows missed all six malignant test records. These are single-partition point estimates, not a statistically established ranking or clinical validation.",
+      "title": "Four rows, one shared holdout"
+    },
+    {
+      "text": "The ideal row also failed, so sampling noise alone is not a demonstrated explanation. A training-only diagnostic showed weak label structure for this particular feature map. The consumed test set was not reused for tuning. The recorded display exposes the matrices and each prediction, so the result can be inspected without another fit or quantum job. Kernel error and classification error remain separate quantities.",
+      "title": "The ideal row failed too"
+    },
+    {
+      "text": "The contribution is a reproducible, shot-aware audit with classical controls, training-only preparation, strict capture checks and per-record evidence. It does not invent quantum kernels or claim quantum advantage. The public repository includes the frozen protocol, source code, raw counts, predictions, receipts and tests. The demo is recorded evidence from a local ideal simulator, not physical hardware or a medical screening tool.",
+      "title": "Inspectable evidence and limits"
+    }
+  ],
+  "slides": {
+    "scene-1.png": {
+      "bytes": 49542,
+      "sha256": "bef649d3266e74fb1b29143fe36ab880bb8f3474f498556ff9901776db0a7004"
+    },
+    "scene-2.png": {
+      "bytes": 48896,
+      "sha256": "adadb4f78f84b66b6f752f6f78bc7b1ac7f46264956df88d288f097c54922733"
+    },
+    "scene-3.png": {
+      "bytes": 37152,
+      "sha256": "529640717a5ff9d78e19fcd1d215196c527783485451bb7fe59b8493ca0fb39d"
+    },
+    "scene-4.png": {
+      "bytes": 42570,
+      "sha256": "a7e54fac715b9c8e900c204723a792d4a273ca86dc6a029bad2284c18b3364cb"
+    },
+    "scene-5.png": {
+      "bytes": 48636,
+      "sha256": "2fc36e7ef5aa8edcfbd6cf7ffc51d9e8ac6d35417aa41f0227abda66e735d881"
+    },
+    "scene-6.png": {
+      "bytes": 50388,
+      "sha256": "a118914ea183beb9e77dd499538f69b652363e99cb0ac270c55b070b86be17ef"
+    }
+  },
+  "status": "awaiting_author_supplied_synthetic_audio",
+  "synthesis_run": false,
+  "video_encoded": false,
+  "voice_style": "Clear English narration, about 140 words per minute. Read the transcript verbatim, with brief pauses between paragraphs. No introductions or added commentary.",
+  "word_count": 360
+}

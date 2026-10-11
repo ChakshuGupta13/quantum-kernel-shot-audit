@@ -1,0 +1,46 @@
+{
+  "builder_source": {
+    "bytes": 7875,
+    "sha256": "ec0e322251b3f40f671c203f8b96a5ba8e7dbed40d02a802d20ea66aea8cac44"
+  },
+  "data": {
+    "bytes": 37125,
+    "sha256": "2844448b9631f1d0c42b43f7951ce19cb29aa7b4fcd3f134909369a62df984fd"
+  },
+  "demo": {
+    "bytes": 56049,
+    "sha256": "1b0f59a729b0ec738f0e2a9444bb68d22a15029aecb92b8a58406d95dd9699ce"
+  },
+  "input_records": {
+    "evaluation-v1/report.json": {
+      "bytes": 2891,
+      "sha256": "31d54f9a82a352f94db0652d16f7fe66633d89e1d56afcefd9f70549ab952a43"
+    },
+    "evaluation-v1/rows/linear.json": {
+      "bytes": 3072,
+      "sha256": "83e0f35b7cb62ab064ae0edfe198af56c94ab67bc356938adf71208dff2f6c58"
+    },
+    "evaluation-v1/rows/quantum_ideal.json": {
+      "bytes": 3082,
+      "sha256": "415269b283cabe2ea15fbff4b81cb900b83db88a67476f71c2291132a3ed97f7"
+    },
+    "evaluation-v1/rows/quantum_shot.json": {
+      "bytes": 3105,
+      "sha256": "1b110e9b3cbce25b614c7360902a59767f181a0211486531f9ad962e2fbcff42"
+    },
+    "evaluation-v1/rows/rbf.json": {
+      "bytes": 3133,
+      "sha256": "22a149e84d793fdd955c3fe0f3103f31a4eb8d1eeb8ec75a62f334c058fec927"
+    },
+    "sampling-v1/ideal-kernels.npz": {
+      "bytes": 9270,
+      "sha256": "463d34a48457b8a854efb81879c7db38d7f06f2e14e6894a01db4fdedda7f95e"
+    },
+    "sampling-v1/sampled-kernels.npz": {
+      "bytes": 2579,
+      "sha256": "d3d584fdd6349dbabf588a1488d687a6074507e7ff871411d4e009805766eb6c"
+    }
+  },
+  "numerical_recomputation": false,
+  "project": "Quantum Kernel Shot Audit"
+}
