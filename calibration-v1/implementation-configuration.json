@@ -1,0 +1,45 @@
+{
+  "packages": {
+    "numpy": "2.4.6",
+    "qiskit": "2.5.1",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.17.1"
+  },
+  "parameter_origin": "live KernelSettings dataclass; checked against the design contract",
+  "protocol_sha256": "113f4c42b865406dc24b82f79092c81097ccfd6e13978a764066a24187f27a0f",
+  "python": "3.14.7",
+  "scope": "synthetic calibration only; no dataset fit or full matrix execution",
+  "settings": {
+    "alpha": 2.0,
+    "angle_upper": 3.141592653589793,
+    "calibration_seed": 2029,
+    "distinct_case_delta": 0.01,
+    "eigenvalue_threshold": 1e-10,
+    "entanglement": "linear",
+    "feature_dimension": 4,
+    "first_angles": [
+      0.2,
+      0.4,
+      0.6,
+      0.8
+    ],
+    "insert_barriers": false,
+    "matrix_seed": 2028,
+    "numeric_tolerance": 1e-10,
+    "parameter_prefix": "x",
+    "reps": 1,
+    "second_angles": [
+      1.0,
+      0.8,
+      0.6,
+      0.4
+    ],
+    "shots_per_entry": 256,
+    "transpiler_optimization_level": 0,
+    "transpiler_seed": 2030
+  },
+  "source_sha256": {
+    "calibrate.py": "cdac1ddcb975981f348b817eea737707e9287ac686659c2bc33b6480a57839cc",
+    "kernels.py": "dca6e9560eb2ae39f264ea59a3c9b9a36809251d07d3306019abc841d9c60ed8"
+  }
+}

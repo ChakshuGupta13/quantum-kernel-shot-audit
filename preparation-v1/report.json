@@ -1,0 +1,17 @@
+{
+  "binding_sha256": "3a9cf1a4c6d0284a43e127cc72a456b6cc7b20b5e4edca0923ad8fcba8a429ca",
+  "classifiers_fitted": false,
+  "clipped_test_coordinates": 7,
+  "components": 4,
+  "full_sampling_authorized": false,
+  "kernels_evaluated": false,
+  "pair_count": 1008,
+  "pair_generation_seconds": 0.3708203749265522,
+  "preprocessing_seconds": 0.0028639580123126507,
+  "quantum_jobs": 0,
+  "shared_pipeline_fit_calls": 1,
+  "status": "preparation_complete",
+  "test_predictions_generated": false,
+  "test_rows": 16,
+  "train_rows": 32
+}

@@ -1,0 +1,240 @@
+{
+  "classical_kernel_parameters": {
+    "gamma_rule": "SVC scale: 1/(feature_count * training_variance); one when variance is zero",
+    "rbf_gamma": 0.39068259874313566,
+    "training_coordinate_variance": 0.6399056441322818
+  },
+  "classifiers_fitted": 0,
+  "dataset_sha256": "77f6adc3db789575a3ed95b1e1ca14ec55706e88063cc0ff1e611afbca8fc927",
+  "definitions": {
+    "alignment": "Frobenius cosine of double-centered kernel and centered signed-label outer product",
+    "alignment_reference": "Identity self-similarity has nonzero centered alignment even without off-diagonal class structure",
+    "numerical_tolerance": 1e-10,
+    "pair_std_ddof": 0,
+    "pairs": "Each unordered off-diagonal pair once; pooled within-class mean is pair-weighted",
+    "scale": "C times largest eigenvalue is a descriptive scale indicator, not a causal or capacity-match test"
+  },
+  "identity_kernel_alignment_reference": 0.1796053020267749,
+  "input_files": {
+    "configuration.json": {
+      "bytes": 7389,
+      "sha256": "113f4c42b865406dc24b82f79092c81097ccfd6e13978a764066a24187f27a0f"
+    },
+    "preparation-v1/angles.json": {
+      "bytes": 6787,
+      "sha256": "bafcbc591e2046479aa60b064bee429bf532382505b1be1265c363027c2bfaa9"
+    },
+    "preparation-v1/complete.json": {
+      "bytes": 914,
+      "sha256": "a89913e4d143ede36e682f49120cabe174cb0c9df567757bf7347c638e9d039a"
+    },
+    "preparation-v1/implementation-configuration.json": {
+      "bytes": 1542,
+      "sha256": "3a9cf1a4c6d0284a43e127cc72a456b6cc7b20b5e4edca0923ad8fcba8a429ca"
+    },
+    "sampling-v1/complete.json": {
+      "bytes": 1456,
+      "sha256": "b3e473b7d5a1b65e6b02db1ce839ce4120b920efb6b3d201d8d991a48d06d9a8"
+    },
+    "sampling-v1/execution-plan.json": {
+      "bytes": 3354,
+      "sha256": "3782a330a1b9ab603a9d0fa30e95a3c76672cc185e914a568601b4ba9b2401ce"
+    },
+    "sampling-v1/repaired-kernels.npz": {
+      "bytes": 15981,
+      "sha256": "37a00ff69926b0bb8a3df112d9d728fb5d8ec862ac09b537d594d54c1b80ec02"
+    }
+  },
+  "integrity_reads": "Complete source and mixed train/test artifact files are hashed; only training fields enter numerical diagnostics",
+  "kernels": {
+    "linear": {
+      "C_times_maximum_eigenvalue": 224.65156969860683,
+      "alignment_defined": true,
+      "between_class": {
+        "count": 240,
+        "defined": true,
+        "mean": 6.121836678508862,
+        "population_std": 2.82837253031587
+      },
+      "centered_frobenius_norm": 40.97191702194204,
+      "centered_label_alignment": 0.4244090774060508,
+      "frobenius_norm": 227.41386006019488,
+      "maximum_eigenvalue": 224.65156969860683,
+      "mean_diagonal": 8.91070977465791,
+      "minimum_eigenvalue": -3.593972666145647e-14,
+      "regularization_C": 1,
+      "within_benign": {
+        "count": 190,
+        "defined": true,
+        "mean": 5.827664896287594,
+        "population_std": 2.7837091588734686
+      },
+      "within_class": {
+        "count": 256,
+        "defined": true,
+        "mean": 6.498847147210119,
+        "population_std": 3.0877358501229324
+      },
+      "within_malignant": {
+        "count": 66,
+        "defined": true,
+        "mean": 8.43103847562345,
+        "population_std": 3.105278083196443
+      },
+      "within_minus_between": 0.37701046870125765
+    },
+    "quantum_ideal": {
+      "C_times_maximum_eigenvalue": 3.0238716769250145,
+      "alignment_defined": true,
+      "between_class": {
+        "count": 240,
+        "defined": true,
+        "mean": 0.060393036768313264,
+        "population_std": 0.07107148389607666
+      },
+      "centered_frobenius_norm": 5.795084474593254,
+      "centered_label_alignment": 0.16542924063846437,
+      "frobenius_norm": 6.502513050285011,
+      "maximum_eigenvalue": 3.0238716769250145,
+      "mean_diagonal": 0.9999999999999998,
+      "minimum_eigenvalue": 0.14771225969033824,
+      "regularization_C": 1,
+      "within_benign": {
+        "count": 190,
+        "defined": true,
+        "mean": 0.0593919062801019,
+        "population_std": 0.0967008497977024
+      },
+      "within_class": {
+        "count": 256,
+        "defined": true,
+        "mean": 0.06063260456776398,
+        "population_std": 0.0908417234635143
+      },
+      "within_malignant": {
+        "count": 66,
+        "defined": true,
+        "mean": 0.06420431175951843,
+        "population_std": 0.07121597803008237
+      },
+      "within_minus_between": 0.000239567799450717
+    },
+    "quantum_shot": {
+      "C_times_maximum_eigenvalue": 2.986085004939997,
+      "alignment_defined": true,
+      "between_class": {
+        "count": 240,
+        "defined": true,
+        "mean": 0.05834960937499985,
+        "population_std": 0.06878959786970182
+      },
+      "centered_frobenius_norm": 5.789061146065456,
+      "centered_label_alignment": 0.16812025974248754,
+      "frobenius_norm": 6.478001856795088,
+      "maximum_eigenvalue": 2.986085004939997,
+      "mean_diagonal": 1,
+      "minimum_eigenvalue": 0.1415096856327097,
+      "regularization_C": 1,
+      "within_benign": {
+        "count": 190,
+        "defined": true,
+        "mean": 0.059066611842105106,
+        "population_std": 0.0960803002384303
+      },
+      "within_class": {
+        "count": 256,
+        "defined": true,
+        "mean": 0.05987548828124985,
+        "population_std": 0.09082242491531706
+      },
+      "within_malignant": {
+        "count": 66,
+        "defined": true,
+        "mean": 0.062204071969696836,
+        "population_std": 0.07356894631628598
+      },
+      "within_minus_between": 0.00152587890625
+    },
+    "rbf": {
+      "C_times_maximum_eigenvalue": 11.490152908367957,
+      "alignment_defined": true,
+      "between_class": {
+        "count": 240,
+        "defined": true,
+        "mean": 0.17909096938167593,
+        "population_std": 0.1932208267061037
+      },
+      "centered_frobenius_norm": 6.925480866738225,
+      "centered_label_alignment": 0.40154946988932955,
+      "frobenius_norm": 12.952889150676718,
+      "maximum_eigenvalue": 11.490152908367957,
+      "mean_diagonal": 1,
+      "minimum_eigenvalue": 0.0006011070648377834,
+      "regularization_C": 1,
+      "within_benign": {
+        "count": 190,
+        "defined": true,
+        "mean": 0.39703035822703153,
+        "population_std": 0.27815474595153006
+      },
+      "within_class": {
+        "count": 256,
+        "defined": true,
+        "mean": 0.3561127093388113,
+        "population_std": 0.27074707481461946
+      },
+      "within_malignant": {
+        "count": 66,
+        "defined": true,
+        "mean": 0.23831947769090434,
+        "population_std": 0.20713164212263044
+      },
+      "within_minus_between": 0.17702173995713535
+    }
+  },
+  "preprocessing_refits": 0,
+  "quantum_jobs": 0,
+  "scope": "Post-evaluation exploratory diagnosis; numeric inputs are training coordinates, training kernels and training labels only",
+  "source_sha256": "1e5fad13b74c22fbd28ffae2649ac83b114d0b6b97b9e8bd6fbad82040417d92",
+  "status": "training_diagnostics_complete",
+  "test_labels_used": false,
+  "test_predictions_used": false,
+  "training_class_counts_0_1": [
+    20,
+    12
+  ],
+  "training_row_ids": [
+    412,
+    450,
+    250,
+    219,
+    420,
+    310,
+    57,
+    162,
+    249,
+    564,
+    459,
+    513,
+    270,
+    341,
+    322,
+    408,
+    454,
+    161,
+    561,
+    396,
+    316,
+    143,
+    402,
+    94,
+    75,
+    407,
+    261,
+    509,
+    478,
+    135,
+    334,
+    556
+  ]
+}

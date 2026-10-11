@@ -1,0 +1,113 @@
+{
+  "calls": {
+    "decision_function": 4,
+    "fit": 4,
+    "predict": 4
+  },
+  "classifiers_fitted": 4,
+  "clinical_validation": false,
+  "comparison_complete": true,
+  "confidence": "Single-partition, single-seed point estimates; not a statistically established ranking",
+  "execution_plan_sha256": "d37d18d3482a2e750376374878f0f8d3a6efd3424bf90c09656f72d10d5359e2",
+  "frozen_inputs_unchanged": true,
+  "preprocessing_fits": 0,
+  "quantum_advantage_claim": false,
+  "quantum_jobs": 0,
+  "rows": {
+    "linear": {
+      "evidence": {
+        "bytes": 3072,
+        "path": "rows/linear.json",
+        "sha256": "83e0f35b7cb62ab064ae0edfe198af56c94ab67bc356938adf71208dff2f6c58"
+      },
+      "fit_and_inference_seconds": 0.0004963749088346958,
+      "metrics": {
+        "accuracy": 0.9375,
+        "balanced_accuracy": 0.95,
+        "confusion_matrix_0_1": [
+          [
+            9,
+            1
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "roc_auc_from_decision_function": 0.9833333333333334
+      }
+    },
+    "quantum_ideal": {
+      "evidence": {
+        "bytes": 3082,
+        "path": "rows/quantum_ideal.json",
+        "sha256": "415269b283cabe2ea15fbff4b81cb900b83db88a67476f71c2291132a3ed97f7"
+      },
+      "fit_and_inference_seconds": 0.0012516670394688845,
+      "metrics": {
+        "accuracy": 0.5,
+        "balanced_accuracy": 0.4,
+        "confusion_matrix_0_1": [
+          [
+            8,
+            2
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "roc_auc_from_decision_function": 0.35
+      }
+    },
+    "quantum_shot": {
+      "evidence": {
+        "bytes": 3105,
+        "path": "rows/quantum_shot.json",
+        "sha256": "1b110e9b3cbce25b614c7360902a59767f181a0211486531f9ad962e2fbcff42"
+      },
+      "fit_and_inference_seconds": 0.0003771670162677765,
+      "metrics": {
+        "accuracy": 0.5625,
+        "balanced_accuracy": 0.45,
+        "confusion_matrix_0_1": [
+          [
+            9,
+            1
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "roc_auc_from_decision_function": 0.31666666666666665
+      }
+    },
+    "rbf": {
+      "evidence": {
+        "bytes": 3133,
+        "path": "rows/rbf.json",
+        "sha256": "22a149e84d793fdd955c3fe0f3103f31a4eb8d1eeb8ec75a62f334c058fec927"
+      },
+      "fit_and_inference_seconds": 0.000393084017559886,
+      "metrics": {
+        "accuracy": 0.9375,
+        "balanced_accuracy": 0.9166666666666667,
+        "confusion_matrix_0_1": [
+          [
+            10,
+            0
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "roc_auc_from_decision_function": 0.9666666666666668
+      }
+    }
+  },
+  "shared_held_out_records": 16,
+  "shot_minus_ideal_balanced_accuracy": 0.04999999999999999,
+  "status": "classifier_comparison_complete"
+}

@@ -1,0 +1,50 @@
+{
+  "backend": "basic_simulator",
+  "backend_calls": 1,
+  "cases": [
+    {
+      "case": "self_overlap",
+      "observed": 1.0,
+      "passed": true,
+      "reference": 1.0
+    },
+    {
+      "absolute_error": 0.016958442278799175,
+      "case": "distinct_overlap",
+      "observed": 0.07421875,
+      "passed": true,
+      "reference": 0.057260307721200825
+    }
+  ],
+  "circuit_operations": [
+    {
+      "barrier": 1,
+      "cx": 12,
+      "h": 8,
+      "measure": 4,
+      "p": 14
+    },
+    {
+      "barrier": 1,
+      "cx": 12,
+      "h": 8,
+      "measure": 4,
+      "p": 14
+    }
+  ],
+  "circuits": 2,
+  "classifiers_fitted": false,
+  "configuration_sha256": "ecefcf7bb1056fb35e3334165f1d9a80a4064d77e701d6638da688ca1ad0dd89",
+  "counts_sha256": "a61d75b2c97c3ace200415e5e2e49a5d0eec0a41decaac055c0a0665e2655d7e",
+  "dataset_used": false,
+  "full_sampling_authorized": false,
+  "hoeffding_tolerance": 0.10172647691992058,
+  "passed": true,
+  "preprocessing_fitted": false,
+  "sampling_seconds": 0.0017834999598562717,
+  "shots_per_circuit": 256,
+  "status": "calibration_passed",
+  "total_seconds": 0.05051920795813203,
+  "total_shots": 512,
+  "transpilation_seconds": 0.04426150000654161
+}

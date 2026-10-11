@@ -1,0 +1,24 @@
+{
+  "ideal_repair": {
+    "minimum_raw_eigenvalue": 0.14771225969033802,
+    "retained_rank": 32,
+    "training_repair_frobenius_norm": 9.187514742159356e-15
+  },
+  "sampled_repair": {
+    "minimum_raw_eigenvalue": 0.14150968563270952,
+    "retained_rank": 32,
+    "training_repair_frobenius_norm": 1.1850704643700337e-14
+  },
+  "test_training_kernel_error": {
+    "absolute_frobenius_error": 0.3349714475520133,
+    "reference_frobenius_norm": 2.827553469882591,
+    "relative_error_undefined": false,
+    "relative_frobenius_error": 0.1184668835160604
+  },
+  "training_kernel_error": {
+    "absolute_frobenius_error": 0.4467667762713173,
+    "reference_frobenius_norm": 6.502513050285015,
+    "relative_error_undefined": false,
+    "relative_frobenius_error": 0.06870678656334797
+  }
+}

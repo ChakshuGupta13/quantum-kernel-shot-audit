@@ -1,0 +1,128 @@
+{
+  "schema": 1,
+  "status": "PROTOCOL_ONLY_NO_EXECUTION_APPROVAL",
+  "project": "Prompt A finite-shot quantum-kernel pilot",
+  "dataset": {
+    "loader": "sklearn.datasets.load_breast_cancer",
+    "source_url": "https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic",
+    "doi": "10.24432/C5DW2B",
+    "license": "CC BY 4.0",
+    "rows": 569,
+    "features": 30,
+    "sha256": "77f6adc3db789575a3ed95b1e1ca14ec55706e88063cc0ff1e611afbca8fc927",
+    "hash_recipe": "SHA256 of row-major little-endian float64 data bytes, then raw uint8 target bytes, then UTF-8 json.dumps(feature_names, separators=(',', ':'))",
+    "positive_label": 1,
+    "positive_meaning": "malignant",
+    "label_conversion": "normalized_label = int(raw_target == 0)",
+    "raw_target_names": ["malignant", "benign"]
+  },
+  "partition": {
+    "admission_seed": 2026,
+    "split_seed": 2027,
+    "admitted_rows": 48,
+    "train_rows": 32,
+    "test_rows": 16,
+    "omitted_rows": 521,
+    "stratified": true,
+    "row_id_definition": "zero-based row index in the pinned scikit-learn dataset",
+    "train_row_ids": [412, 450, 250, 219, 420, 310, 57, 162, 249, 564, 459, 513, 270, 341, 322, 408, 454, 161, 561, 396, 316, 143, 402, 94, 75, 407, 261, 509, 478, 135, 334, 556],
+    "test_row_ids": [53, 354, 50, 475, 324, 255, 379, 380, 493, 68, 311, 521, 392, 375, 280, 458],
+    "train_class_counts_0_1": [20, 12],
+    "test_class_counts_0_1": [10, 6]
+  },
+  "preprocessing": {
+    "shared_fit_on": "training rows only, once for all four classifiers",
+    "steps": [
+      {"class": "StandardScaler", "with_mean": true, "with_std": true},
+      {"class": "PCA", "n_components": 4, "svd_solver": "full", "whiten": false},
+      {"class": "MinMaxScaler", "feature_range": [0.0, 3.141592653589793], "clip": true}
+    ],
+    "test_action": "transform only; record coordinates clipped to the training-fitted angle range"
+  },
+  "quantum": {
+    "feature_map": "qiskit.circuit.library.zz_feature_map",
+    "feature_dimension": 4,
+    "reps": 1,
+    "entanglement": "linear",
+    "alpha": 2.0,
+    "data_map_func": "Qiskit default",
+    "parameter_prefix": "x",
+    "insert_barriers": false,
+    "ideal_kernel": "numerical statevector fidelity squared",
+    "sampled_kernel": "compute-uncompute circuit; frequency of the all-zero measured word",
+    "backend": "local Qiskit BasicSimulator only",
+    "shots_per_entry": 256,
+    "calibration_seed": 2029,
+    "matrix_seed": 2028,
+    "transpiler_seed": 2030,
+    "transpiler_optimization_level": 0,
+    "training_diagonal": "analytic one; no diagonal sampling circuits",
+    "training_symmetry": "estimate each unordered off-diagonal pair once and mirror the same value",
+    "duplicate_policy": "measure every declared non-diagonal and test-training pair even if its transformed inputs coincide",
+    "circuit_order": "training upper triangle in row-major order, then test rows by training columns in row-major order",
+    "train_off_diagonal_circuits": 496,
+    "test_train_circuits": 512,
+    "matrix_circuits": 1008,
+    "matrix_shots": 258048,
+    "matrix_backend_calls": 1
+  },
+  "spectral_repair": {
+    "apply_to": ["quantum_ideal", "quantum_shot"],
+    "fit_on": "training Gram matrix only; never test labels or a test-test Gram matrix",
+    "eigenvalue_threshold": 1e-10,
+    "training_kernel": "V_positive @ diag(lambda_positive) @ V_positive.T",
+    "test_training_kernel": "C_raw @ V_positive @ V_positive.T",
+    "normalize_diagonal_after_repair": false,
+    "raw_diagnostics_retained": true
+  },
+  "classifiers": {
+    "shared": {"C": 1.0, "probability": false, "tol": 0.001, "max_iter": 10000, "class_weight": null, "shrinking": true, "cache_size": 128},
+    "rows": [
+      {"id": "quantum_ideal", "class": "SVC", "kernel": "precomputed", "kernel_input": "repaired ideal fidelity"},
+      {"id": "quantum_shot", "class": "SVC", "kernel": "precomputed", "kernel_input": "repaired finite-shot fidelity"},
+      {"id": "linear", "class": "SVC", "kernel": "linear", "kernel_input": "same four angle features"},
+      {"id": "rbf", "class": "SVC", "kernel": "rbf", "gamma": "scale", "kernel_input": "same four angle features"}
+    ],
+    "fits_per_row": 1,
+    "test_prediction_calls_per_row": 1,
+    "test_decision_function_calls_per_row": 1,
+    "test_input_reuse": "both inference calls consume the already prepared angle features or precomputed cross-kernel; no new quantum evaluation",
+    "convergence_warning_action": "fail the row; retain evidence; do not substitute a different model"
+  },
+  "calibration": {
+    "circuits": 2,
+    "backend_calls": 1,
+    "shots": 512,
+    "first_angles": [0.2, 0.4, 0.6, 0.8],
+    "second_angles": [1.0, 0.8, 0.6, 0.4],
+    "cases": ["self overlap must produce 256 all-zero shots", "distinct-input overlap checked against statevector fidelity"],
+    "distinct_case_delta": 0.01,
+    "distinct_case_tolerance": "sqrt(log(2 / delta) / (2 * shots_per_entry))",
+    "numeric_statevector_tolerance": 1e-10,
+    "failure_action": "stop before matrix sampling; record calibration_failed"
+  },
+  "metrics": {
+    "primary": "balanced_accuracy",
+    "secondary": ["accuracy", "roc_auc_from_decision_function", "confusion_matrix_0_1"],
+    "paired_quantum_difference": "quantum_shot balanced accuracy minus quantum_ideal balanced accuracy on the same sixteen records",
+    "kernel_diagnostics": ["raw training relative Frobenius error against ideal", "raw test-training relative Frobenius error against ideal", "minimum raw training eigenvalue", "retained spectral rank", "training repair norm", "reported clipped test coordinates"],
+    "cost": ["circuits", "shots", "backend calls", "preprocessing time", "ideal kernel time", "sampling time", "repair time", "fit and prediction time"],
+    "uncertainty_or_significance_claim": false
+  },
+  "execution": {
+    "authorization": false,
+    "optimizer_or_sweep": false,
+    "hardware": false,
+    "maximum_quantum_backend_calls_including_calibration": 2,
+    "maximum_sampled_circuits_including_calibration": 1010,
+    "maximum_shots_including_calibration": 258560,
+    "full_sampling_launch_gate": "calibration and measured timing must pass; obtain separate launch approval with command, runtime estimate and resource cost",
+    "required_recording": ["dataset and configuration digests", "implementation digests before any fit", "fitted preprocessing parameters", "ordered pair-to-circuit manifest", "all raw counts", "raw and repaired kernels", "per-record labels predictions and decision scores", "phase timings", "row failure reasons"],
+    "admission_rule": "complete counts for every declared pair, input hashes unchanged, finite arrays, valid calibration and all four classifier rows before a completed comparison",
+    "failure_labels": ["calibration_failed", "capture_incomplete", "row_failed", "integrity_failed"],
+    "retries": 0,
+    "post_test_tuning": false
+  },
+  "versions": {"python": "3.14.7", "numpy": "2.4.6", "scipy": "1.17.1", "scikit-learn": "1.9.0", "qiskit": "2.5.1"},
+  "scope_limits": ["48-record pilot, not a full-dataset study", "single partition and sampling seed", "matched inputs and preprocessing, not matched model capacity", "synthetic ideal measurement noise, not a hardware-noise model", "diagnostic data, not clinical screening", "no novelty, speedup or quantum-advantage claim", "existing projects and holdouts unchanged"]
+}

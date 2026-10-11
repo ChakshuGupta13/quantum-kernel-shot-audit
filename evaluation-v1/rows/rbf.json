@@ -1,0 +1,159 @@
+{
+  "calls": {
+    "decision_function": 1,
+    "fit": 1,
+    "predict": 1
+  },
+  "classes": [
+    0,
+    1
+  ],
+  "fit_and_inference_seconds": 0.000393084017559886,
+  "fitted_rbf_gamma": 0.39068259874313566,
+  "id": "rbf",
+  "metrics": {
+    "accuracy": 0.9375,
+    "balanced_accuracy": 0.9166666666666667,
+    "confusion_matrix_0_1": [
+      [
+        10,
+        0
+      ],
+      [
+        1,
+        5
+      ]
+    ],
+    "roc_auc_from_decision_function": 0.9666666666666668
+  },
+  "parameters": {
+    "C": 1.0,
+    "break_ties": false,
+    "cache_size": 128.0,
+    "class_weight": null,
+    "coef0": 0.0,
+    "decision_function_shape": "ovr",
+    "degree": 3,
+    "gamma": "scale",
+    "kernel": "rbf",
+    "max_iter": 10000,
+    "probability": false,
+    "random_state": null,
+    "shrinking": true,
+    "tol": 0.001,
+    "verbose": false
+  },
+  "records": [
+    {
+      "decision_score": 0.8849888935013824,
+      "label": 1,
+      "prediction": 1,
+      "row_id": 53
+    },
+    {
+      "decision_score": -0.6068999406892184,
+      "label": 0,
+      "prediction": 0,
+      "row_id": 354
+    },
+    {
+      "decision_score": -0.9305052208355122,
+      "label": 0,
+      "prediction": 0,
+      "row_id": 50
+    },
+    {
+      "decision_score": -1.3463811244945654,
+      "label": 0,
+      "prediction": 0,
+      "row_id": 475
+    },
+    {
+      "decision_score": -1.4018008236816004,
+      "label": 0,
+      "prediction": 0,
+      "row_id": 324
+    },
+    {
+      "decision_score": -0.38193879362046684,
+      "label": 1,
+      "prediction": 0,
+      "row_id": 255
+    },
+    {
+      "decision_score": 0.7796324834071973,
+      "label": 1,
+      "prediction": 1,
+      "row_id": 379
+    },
+    {
+      "decision_score": -0.8198801888776281,
+      "label": 0,
+      "prediction": 0,
+      "row_id": 380
+    },
+    {
+      "decision_score": -0.8277946911480611,
+      "label": 0,
+      "prediction": 0,
+      "row_id": 493
+    },
+    {
+      "decision_score": -0.26826077303104096,
+      "label": 0,
+      "prediction": 0,
+      "row_id": 68
+    },
+    {
+      "decision_score": -0.7455197409088477,
+      "label": 0,
+      "prediction": 0,
+      "row_id": 311
+    },
+    {
+      "decision_score": 1.2421949316200271,
+      "label": 1,
+      "prediction": 1,
+      "row_id": 521
+    },
+    {
+      "decision_score": 1.317378875188181,
+      "label": 1,
+      "prediction": 1,
+      "row_id": 392
+    },
+    {
+      "decision_score": -0.8459961762998565,
+      "label": 0,
+      "prediction": 0,
+      "row_id": 375
+    },
+    {
+      "decision_score": 1.3489382202006668,
+      "label": 1,
+      "prediction": 1,
+      "row_id": 280
+    },
+    {
+      "decision_score": -0.24990211987370914,
+      "label": 0,
+      "prediction": 0,
+      "row_id": 458
+    }
+  ],
+  "status": "row_complete",
+  "test_shape": [
+    16,
+    4
+  ],
+  "training_shape": [
+    32,
+    4
+  ],
+  "warnings": [
+    {
+      "category": "FutureWarning",
+      "message": "The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`"
+    }
+  ]
+}

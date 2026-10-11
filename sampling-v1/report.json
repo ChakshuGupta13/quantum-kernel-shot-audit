@@ -1,0 +1,21 @@
+{
+  "backend": "basic_simulator",
+  "backend_calls": 1,
+  "circuits": 1008,
+  "classifier_fits": 0,
+  "comparison_complete": false,
+  "execution_plan_sha256": "3782a330a1b9ab603a9d0fa30e95a3c76672cc185e914a568601b4ba9b2401ce",
+  "hardware_run": false,
+  "sealed_inputs_unchanged": true,
+  "shots_per_entry": 256,
+  "status": "kernel_capture_complete",
+  "test_predictions_generated": false,
+  "timings": {
+    "construction_seconds": 0.0602917498908937,
+    "ideal_kernel_seconds": 0.012789583997800946,
+    "repair_seconds": 0.0019959579221904278,
+    "sampling_seconds": 0.3479995420202613,
+    "transpilation_seconds": 0.08273749984800816
+  },
+  "total_shots": 258048
+}

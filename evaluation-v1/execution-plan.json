@@ -1,0 +1,312 @@
+{
+  "calls_per_row": {
+    "decision_function": 1,
+    "fit": 1,
+    "predict": 1
+  },
+  "classifier_parameters": [
+    {
+      "id": "quantum_ideal",
+      "parameters": {
+        "C": 1,
+        "break_ties": false,
+        "cache_size": 128,
+        "class_weight": null,
+        "coef0": 0,
+        "decision_function_shape": "ovr",
+        "degree": 3,
+        "gamma": "scale",
+        "kernel": "precomputed",
+        "max_iter": 10000,
+        "probability": false,
+        "random_state": null,
+        "shrinking": true,
+        "tol": 0.001,
+        "verbose": false
+      }
+    },
+    {
+      "id": "quantum_shot",
+      "parameters": {
+        "C": 1,
+        "break_ties": false,
+        "cache_size": 128,
+        "class_weight": null,
+        "coef0": 0,
+        "decision_function_shape": "ovr",
+        "degree": 3,
+        "gamma": "scale",
+        "kernel": "precomputed",
+        "max_iter": 10000,
+        "probability": false,
+        "random_state": null,
+        "shrinking": true,
+        "tol": 0.001,
+        "verbose": false
+      }
+    },
+    {
+      "id": "linear",
+      "parameters": {
+        "C": 1,
+        "break_ties": false,
+        "cache_size": 128,
+        "class_weight": null,
+        "coef0": 0,
+        "decision_function_shape": "ovr",
+        "degree": 3,
+        "gamma": "scale",
+        "kernel": "linear",
+        "max_iter": 10000,
+        "probability": false,
+        "random_state": null,
+        "shrinking": true,
+        "tol": 0.001,
+        "verbose": false
+      }
+    },
+    {
+      "id": "rbf",
+      "parameters": {
+        "C": 1,
+        "break_ties": false,
+        "cache_size": 128,
+        "class_weight": null,
+        "coef0": 0,
+        "decision_function_shape": "ovr",
+        "degree": 3,
+        "gamma": "scale",
+        "kernel": "rbf",
+        "max_iter": 10000,
+        "probability": false,
+        "random_state": null,
+        "shrinking": true,
+        "tol": 0.001,
+        "verbose": false
+      }
+    }
+  ],
+  "classifier_settings": {
+    "cache_mb": 128,
+    "class_weight": null,
+    "iteration_cap": 10000,
+    "probability": false,
+    "rbf_gamma": "scale",
+    "regularization": 1,
+    "shrinking": true,
+    "tolerance": 0.001
+  },
+  "evaluation_authorized": false,
+  "metrics": {
+    "cost": [
+      "circuits",
+      "shots",
+      "backend calls",
+      "preprocessing time",
+      "ideal kernel time",
+      "sampling time",
+      "repair time",
+      "fit and prediction time"
+    ],
+    "kernel_diagnostics": [
+      "raw training relative Frobenius error against ideal",
+      "raw test-training relative Frobenius error against ideal",
+      "minimum raw training eigenvalue",
+      "retained spectral rank",
+      "training repair norm",
+      "reported clipped test coordinates"
+    ],
+    "paired_quantum_difference": "quantum_shot balanced accuracy minus quantum_ideal balanced accuracy on the same sixteen records",
+    "primary": "balanced_accuracy",
+    "secondary": [
+      "accuracy",
+      "roc_auc_from_decision_function",
+      "confusion_matrix_0_1"
+    ],
+    "uncertainty_or_significance_claim": false
+  },
+  "preparation_receipt": {
+    "bytes": 914,
+    "sha256": "a89913e4d143ede36e682f49120cabe174cb0c9df567757bf7347c638e9d039a"
+  },
+  "preprocessing_fits": 0,
+  "quantum_jobs": 0,
+  "resource_cost": "Four local 32-record SVC fits; no service or hardware charges; expected to take seconds",
+  "rows": [
+    {
+      "class": "SVC",
+      "id": "quantum_ideal",
+      "kernel": "precomputed",
+      "kernel_input": "repaired ideal fidelity"
+    },
+    {
+      "class": "SVC",
+      "id": "quantum_shot",
+      "kernel": "precomputed",
+      "kernel_input": "repaired finite-shot fidelity"
+    },
+    {
+      "class": "SVC",
+      "id": "linear",
+      "kernel": "linear",
+      "kernel_input": "same four angle features"
+    },
+    {
+      "class": "SVC",
+      "gamma": "scale",
+      "id": "rbf",
+      "kernel": "rbf",
+      "kernel_input": "same four angle features"
+    }
+  ],
+  "runtime": {
+    "calibration_directory": "calibration-v1",
+    "calibration_files": {
+      "counts.json": {
+        "bytes": 348,
+        "sha256": "a61d75b2c97c3ace200415e5e2e49a5d0eec0a41decaac055c0a0665e2655d7e"
+      },
+      "implementation-configuration.json": {
+        "bytes": 1209,
+        "sha256": "ecefcf7bb1056fb35e3334165f1d9a80a4064d77e701d6638da688ca1ad0dd89"
+      },
+      "report.json": {
+        "bytes": 1199,
+        "sha256": "ed06a035d8bf146f4471a5dd0e472b654c2c3a8a02383f59770aa67a346f8477"
+      },
+      "started.json": {
+        "bytes": 75,
+        "sha256": "2c3e98111c2c16a9fe355b3b3b9245d1f456d484e2b15969039c39487648d0d2"
+      }
+    },
+    "dataset_sha256": "77f6adc3db789575a3ed95b1e1ca14ec55706e88063cc0ff1e611afbca8fc927",
+    "packages": {
+      "numpy": "2.4.6",
+      "qiskit": "2.5.1",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.17.1"
+    },
+    "parameter_origin": "live PreparationSettings dataclass, checked against the fixed contract",
+    "protocol_sha256": "113f4c42b865406dc24b82f79092c81097ccfd6e13978a764066a24187f27a0f",
+    "python": "3.14.7",
+    "settings": {
+      "angle_lower": 0,
+      "angle_upper": 3.141592653589793,
+      "clip": true,
+      "n_components": 4,
+      "svd_solver": "full",
+      "whiten": false,
+      "with_mean": true,
+      "with_std": true
+    },
+    "source_sha256": {
+      "calibrate.py": "cdac1ddcb975981f348b817eea737707e9287ac686659c2bc33b6480a57839cc",
+      "evaluate_models.py": "51162785c3bfbcabb9f3d462f50f2096d98bba88a350f9d185f625f258c9fc19",
+      "kernels.py": "dca6e9560eb2ae39f264ea59a3c9b9a36809251d07d3306019abc841d9c60ed8",
+      "prepare_data.py": "0d436804632b7ad53233710021236abee0dbec224d65a0bd9e6b3f4682bf2cdd"
+    }
+  },
+  "sampling_files": {
+    "counts.json": {
+      "bytes": 261517,
+      "sha256": "80855a319dcd4d9848808eb56559a5de7e1909872ce981970215846b257fc425"
+    },
+    "diagnostics.json": {
+      "bytes": 788,
+      "sha256": "79822e2e78e5f1ab2641bfbb9a13d249dc970606ad5b02eb0f36fc0dfda01dbb"
+    },
+    "execution-plan.json": {
+      "bytes": 3354,
+      "sha256": "3782a330a1b9ab603a9d0fa30e95a3c76672cc185e914a568601b4ba9b2401ce"
+    },
+    "ideal-kernels.npz": {
+      "bytes": 9270,
+      "sha256": "463d34a48457b8a854efb81879c7db38d7f06f2e14e6894a01db4fdedda7f95e"
+    },
+    "pairs.json": {
+      "bytes": 114432,
+      "sha256": "34b55949b51274264b8171138dff9dc9104a4c3d485fb34d1ae8479cd6b51118"
+    },
+    "raw-result.json": {
+      "bytes": 5724926,
+      "sha256": "9781ba2e6f0450c30fdbb7e24492e8e0b095104cddcacec62abc1e0941b1b169"
+    },
+    "repaired-kernels.npz": {
+      "bytes": 15981,
+      "sha256": "37a00ff69926b0bb8a3df112d9d728fb5d8ec862ac09b537d594d54c1b80ec02"
+    },
+    "report.json": {
+      "bytes": 673,
+      "sha256": "af5deebade571e86607a7531f0292bc7849a0df822462b94a14fba9121cbdfb4"
+    },
+    "sampled-kernels.npz": {
+      "bytes": 2579,
+      "sha256": "d3d584fdd6349dbabf588a1488d687a6074507e7ff871411d4e009805766eb6c"
+    },
+    "started.json": {
+      "bytes": 234,
+      "sha256": "b8bc44bc711c90d33e4a3512024f4d42a113f1089b85499628d1fe38a8543f39"
+    }
+  },
+  "sampling_plan": {
+    "bytes": 3354,
+    "sha256": "3782a330a1b9ab603a9d0fa30e95a3c76672cc185e914a568601b4ba9b2401ce"
+  },
+  "sampling_receipt": {
+    "bytes": 1456,
+    "sha256": "b3e473b7d5a1b65e6b02db1ce839ce4120b920efb6b3d201d8d991a48d06d9a8"
+  },
+  "status": "evaluation_plan_prepared",
+  "test_row_ids": [
+    53,
+    354,
+    50,
+    475,
+    324,
+    255,
+    379,
+    380,
+    493,
+    68,
+    311,
+    521,
+    392,
+    375,
+    280,
+    458
+  ],
+  "train_row_ids": [
+    412,
+    450,
+    250,
+    219,
+    420,
+    310,
+    57,
+    162,
+    249,
+    564,
+    459,
+    513,
+    270,
+    341,
+    322,
+    408,
+    454,
+    161,
+    561,
+    396,
+    316,
+    143,
+    402,
+    94,
+    75,
+    407,
+    261,
+    509,
+    478,
+    135,
+    334,
+    556
+  ]
+}

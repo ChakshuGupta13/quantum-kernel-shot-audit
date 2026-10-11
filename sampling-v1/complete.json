@@ -1,0 +1,46 @@
+{
+  "comparison_complete": false,
+  "files": {
+    "counts.json": {
+      "bytes": 261517,
+      "sha256": "80855a319dcd4d9848808eb56559a5de7e1909872ce981970215846b257fc425"
+    },
+    "diagnostics.json": {
+      "bytes": 788,
+      "sha256": "79822e2e78e5f1ab2641bfbb9a13d249dc970606ad5b02eb0f36fc0dfda01dbb"
+    },
+    "execution-plan.json": {
+      "bytes": 3354,
+      "sha256": "3782a330a1b9ab603a9d0fa30e95a3c76672cc185e914a568601b4ba9b2401ce"
+    },
+    "ideal-kernels.npz": {
+      "bytes": 9270,
+      "sha256": "463d34a48457b8a854efb81879c7db38d7f06f2e14e6894a01db4fdedda7f95e"
+    },
+    "pairs.json": {
+      "bytes": 114432,
+      "sha256": "34b55949b51274264b8171138dff9dc9104a4c3d485fb34d1ae8479cd6b51118"
+    },
+    "raw-result.json": {
+      "bytes": 5724926,
+      "sha256": "9781ba2e6f0450c30fdbb7e24492e8e0b095104cddcacec62abc1e0941b1b169"
+    },
+    "repaired-kernels.npz": {
+      "bytes": 15981,
+      "sha256": "37a00ff69926b0bb8a3df112d9d728fb5d8ec862ac09b537d594d54c1b80ec02"
+    },
+    "report.json": {
+      "bytes": 673,
+      "sha256": "af5deebade571e86607a7531f0292bc7849a0df822462b94a14fba9121cbdfb4"
+    },
+    "sampled-kernels.npz": {
+      "bytes": 2579,
+      "sha256": "d3d584fdd6349dbabf588a1488d687a6074507e7ff871411d4e009805766eb6c"
+    },
+    "started.json": {
+      "bytes": 234,
+      "sha256": "b8bc44bc711c90d33e4a3512024f4d42a113f1089b85499628d1fe38a8543f39"
+    }
+  },
+  "status": "kernel_capture_complete"
+}

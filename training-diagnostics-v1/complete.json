@@ -1,0 +1,9 @@
+{
+  "classifier_fits": 0,
+  "quantum_jobs": 0,
+  "report": {
+    "bytes": 7420,
+    "sha256": "0354f2754753c755e88e13c78cf0c82c7736547389449edf9a49964dcf15cdec"
+  },
+  "status": "training_diagnostics_complete"
+}

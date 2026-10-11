@@ -1,0 +1,7 @@
+{
+  "explicit_evaluation_approval": true,
+  "plan_sha256": "d37d18d3482a2e750376374878f0f8d3a6efd3424bf90c09656f72d10d5359e2",
+  "preprocessing_fits": 0,
+  "quantum_jobs": 0,
+  "status": "evaluation_started"
+}

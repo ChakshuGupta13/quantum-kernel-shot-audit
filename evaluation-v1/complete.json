@@ -1,0 +1,34 @@
+{
+  "comparison_complete": true,
+  "files": {
+    "execution-plan.json": {
+      "bytes": 7905,
+      "sha256": "d37d18d3482a2e750376374878f0f8d3a6efd3424bf90c09656f72d10d5359e2"
+    },
+    "report.json": {
+      "bytes": 2891,
+      "sha256": "31d54f9a82a352f94db0652d16f7fe66633d89e1d56afcefd9f70549ab952a43"
+    },
+    "rows/linear.json": {
+      "bytes": 3072,
+      "sha256": "83e0f35b7cb62ab064ae0edfe198af56c94ab67bc356938adf71208dff2f6c58"
+    },
+    "rows/quantum_ideal.json": {
+      "bytes": 3082,
+      "sha256": "415269b283cabe2ea15fbff4b81cb900b83db88a67476f71c2291132a3ed97f7"
+    },
+    "rows/quantum_shot.json": {
+      "bytes": 3105,
+      "sha256": "1b110e9b3cbce25b614c7360902a59767f181a0211486531f9ad962e2fbcff42"
+    },
+    "rows/rbf.json": {
+      "bytes": 3133,
+      "sha256": "22a149e84d793fdd955c3fe0f3103f31a4eb8d1eeb8ec75a62f334c058fec927"
+    },
+    "started.json": {
+      "bytes": 210,
+      "sha256": "a0e6aa25419390f98a63464855b36e44dcb44945eaabb8d0c54d7921870d48a9"
+    }
+  },
+  "status": "classifier_comparison_complete"
+}

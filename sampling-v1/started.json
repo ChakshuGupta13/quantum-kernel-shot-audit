@@ -1,0 +1,7 @@
+{
+  "classifier_fitting_authorized": false,
+  "explicit_launch_approval": true,
+  "plan_sha256": "3782a330a1b9ab603a9d0fa30e95a3c76672cc185e914a568601b4ba9b2401ce",
+  "status": "sampling_started",
+  "test_scoring_authorized": false
+}

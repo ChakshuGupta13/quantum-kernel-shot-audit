@@ -1,0 +1,46 @@
+{
+  "calibration_directory": "calibration-v1",
+  "calibration_files": {
+    "counts.json": {
+      "bytes": 348,
+      "sha256": "a61d75b2c97c3ace200415e5e2e49a5d0eec0a41decaac055c0a0665e2655d7e"
+    },
+    "implementation-configuration.json": {
+      "bytes": 1209,
+      "sha256": "ecefcf7bb1056fb35e3334165f1d9a80a4064d77e701d6638da688ca1ad0dd89"
+    },
+    "report.json": {
+      "bytes": 1199,
+      "sha256": "ed06a035d8bf146f4471a5dd0e472b654c2c3a8a02383f59770aa67a346f8477"
+    },
+    "started.json": {
+      "bytes": 75,
+      "sha256": "2c3e98111c2c16a9fe355b3b3b9245d1f456d484e2b15969039c39487648d0d2"
+    }
+  },
+  "dataset_sha256": "77f6adc3db789575a3ed95b1e1ca14ec55706e88063cc0ff1e611afbca8fc927",
+  "packages": {
+    "numpy": "2.4.6",
+    "qiskit": "2.5.1",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.17.1"
+  },
+  "parameter_origin": "live PreparationSettings dataclass, checked against the fixed contract",
+  "protocol_sha256": "113f4c42b865406dc24b82f79092c81097ccfd6e13978a764066a24187f27a0f",
+  "python": "3.14.7",
+  "settings": {
+    "angle_lower": 0.0,
+    "angle_upper": 3.141592653589793,
+    "clip": true,
+    "n_components": 4,
+    "svd_solver": "full",
+    "whiten": false,
+    "with_mean": true,
+    "with_std": true
+  },
+  "source_sha256": {
+    "calibrate.py": "cdac1ddcb975981f348b817eea737707e9287ac686659c2bc33b6480a57839cc",
+    "kernels.py": "dca6e9560eb2ae39f264ea59a3c9b9a36809251d07d3306019abc841d9c60ed8",
+    "prepare_data.py": "0d436804632b7ad53233710021236abee0dbec224d65a0bd9e6b3f4682bf2cdd"
+  }
+}

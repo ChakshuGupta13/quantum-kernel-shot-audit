@@ -1,0 +1,104 @@
+{
+  "backend": "local Qiskit BasicSimulator",
+  "budget": {
+    "backend_calls": 1,
+    "circuits": 1008,
+    "shots_per_entry": 256,
+    "total_shots": 258048
+  },
+  "classifier_fitting_authorized": false,
+  "full_sampling_authorized": false,
+  "hardware_run": false,
+  "implementation": {
+    "packages": {
+      "numpy": "2.4.6",
+      "qiskit": "2.5.1",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.17.1"
+    },
+    "parameter_origin": "live KernelSettings dataclass; checked against the design contract",
+    "protocol_sha256": "113f4c42b865406dc24b82f79092c81097ccfd6e13978a764066a24187f27a0f",
+    "python": "3.14.7",
+    "scope": "Hackathon kernel builder and synthetic calibration; no paper registry or full experiment",
+    "settings": {
+      "alpha": 2,
+      "angle_upper": 3.141592653589793,
+      "calibration_seed": 2029,
+      "distinct_case_delta": 0.01,
+      "eigenvalue_threshold": 1e-10,
+      "entanglement": "linear",
+      "feature_dimension": 4,
+      "first_angles": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "insert_barriers": false,
+      "matrix_seed": 2028,
+      "numeric_tolerance": 1e-10,
+      "parameter_prefix": "x",
+      "reps": 1,
+      "second_angles": [
+        1,
+        0.8,
+        0.6,
+        0.4
+      ],
+      "shots_per_entry": 256,
+      "transpiler_optimization_level": 0,
+      "transpiler_seed": 2030
+    },
+    "source_sha256": {
+      "calibrate.py": "cdac1ddcb975981f348b817eea737707e9287ac686659c2bc33b6480a57839cc",
+      "kernels.py": "dca6e9560eb2ae39f264ea59a3c9b9a36809251d07d3306019abc841d9c60ed8",
+      "prepare_data.py": "0d436804632b7ad53233710021236abee0dbec224d65a0bd9e6b3f4682bf2cdd",
+      "sample_kernels.py": "f6ef8c916aa351b1529d8a0991d27e1adda7030e033aebf6572437dac59d4c6f"
+    }
+  },
+  "prepared_directory": "preparation-v1",
+  "prepared_files": {
+    "angles.json": {
+      "bytes": 6787,
+      "sha256": "bafcbc591e2046479aa60b064bee429bf532382505b1be1265c363027c2bfaa9"
+    },
+    "implementation-configuration.json": {
+      "bytes": 1542,
+      "sha256": "3a9cf1a4c6d0284a43e127cc72a456b6cc7b20b5e4edca0923ad8fcba8a429ca"
+    },
+    "pairs.json": {
+      "bytes": 114432,
+      "sha256": "34b55949b51274264b8171138dff9dc9104a4c3d485fb34d1ae8479cd6b51118"
+    },
+    "preprocessing.json": {
+      "bytes": 9607,
+      "sha256": "d7702d4e70dd016be50424d75be1bae44b3950bc5032a7efb50f980159aeb5b6"
+    },
+    "report.json": {
+      "bytes": 531,
+      "sha256": "349091f07ed41773daec79bbbfcf537f03dc0afe1354fa7b079e4fd2c3417813"
+    },
+    "started.json": {
+      "bytes": 619,
+      "sha256": "915a6728550ded3ad5887fe6ea136a62402cc14a3c335381389fba32674cbcae"
+    }
+  },
+  "prepared_receipt": {
+    "bytes": 914,
+    "sha256": "a89913e4d143ede36e682f49120cabe174cb0c9df567757bf7347c638e9d039a"
+  },
+  "resource_cost": "Local CPU and small four-qubit statevectors; no external service or hardware charges",
+  "runtime_estimate": {
+    "caveat": "Provisional extrapolation from two synthetic circuits, not a measured full-pilot runtime",
+    "estimated_seconds": [
+      24,
+      103
+    ],
+    "linear_extrapolation_seconds": 23.206679983064532,
+    "reference_calibration_seconds": 0.04604499996639788,
+    "safety_factor": 4,
+    "startup_allowance_seconds": 10
+  },
+  "status": "sampling_plan_prepared",
+  "test_scoring_authorized": false
+}
